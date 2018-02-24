@@ -77,8 +77,6 @@ class PokemonWikiPage(object):
                 generations = range(start, end + 1)
             for generation in generations:
                 if generation == 1:
-                    print(type(form))
-                    print(type(generation))
                     base_stats[form, generation] = BaseStatsRBY(
                         hit_points=subsection.hit_points,
                         attack=subsection.attack,
