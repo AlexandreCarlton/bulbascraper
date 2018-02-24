@@ -1,0 +1,4 @@
+dataclasses
+lxml
+mwparserfromhell
+requests

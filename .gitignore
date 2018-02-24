@@ -1,0 +1,4 @@
+wikimedia/
+.cache/
+.pytest_cache/
+.tox/
