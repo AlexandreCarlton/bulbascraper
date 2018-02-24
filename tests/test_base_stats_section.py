@@ -1,3 +1,4 @@
+import textwrap
 import unittest
 
 import mwparserfromhell as mw
@@ -9,11 +10,48 @@ from bulbascraper.base_stats import BaseStats
 
 class TestBaseStatsSectionVolbeat(unittest.TestCase):
 
+    VOLBEAT_STATS = '''
+                    ===Stats===
+                    ====Base stats====
+                    =====Generation III-VI=====
+                    {{BaseStats
+                    |type=Bug
+                    |HP=     65
+                    |Attack= 73
+                    |Defense=55
+                    |SpAtk=  47
+                    |SpDef=  75
+                    |Speed=  85}}
+
+                    =====Generation VII=====
+                    {{BaseStats
+                    |type=Bug
+                    |HP=     65
+                    |Attack= 73
+                    |Defense=75
+                    |SpAtk=  47
+                    |SpDef=  85
+                    |Speed=  85}}
+
+                    ====Pokéathlon stats====
+                    {{Pokéthlon
+                    |type=Bug
+                    |Speed=3
+                    |SpeedMax=4
+                    |Power=3
+                    |PowerMax=3
+                    |Technique=2
+                    |TechniqueMax=2
+                    |Stamina=2
+                    |StaminaMax=3
+                    |Jump=5
+                    |JumpMax=5
+                    }}
+                    '''
+
     def setUp(self):
-        # TODO: Can't seem to get matches='Base stats' ?
-        with open('wikimedia/pokemon/Volbeat.wiki') as wikifile:
-            wikicode = mw.parse(wikifile.read())
-        print(wikicode.get_sections(matches='Base stats', include_headings=False))
+        # mwparserfromhell doesn't like indentations between parameter entries.
+        wikicode = mw.parse(textwrap.dedent(self.VOLBEAT_STATS))
         template = wikicode.get_sections(matches='Base stats', include_headings=False)[0]
         self.base_stats_section = BaseStatsSection(template)
 
