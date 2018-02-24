@@ -78,10 +78,46 @@ class TestBaseStatsSectionVolbeat(unittest.TestCase):
 
 class TestBaseStatsSectionPidgeot(unittest.TestCase):
 
+    PIDGEOT_STATS = '''
+                    ===Stats===
+                    ====Base stats====
+                    =====Generation I-V=====
+                    {{BaseStats with RBY
+                    |type=Normal
+                    |type2=Flying
+                    |HP=     83
+                    |Attack= 80
+                    |Defense=75
+                    |SpAtk=  70
+                    |SpDef=  70
+                    |Special=70
+                    |Speed=  91 }}
+
+                    =====Generation VI onward=====
+                    {{BaseStats
+                    |type=Normal
+                    |type2=Flying
+                    |HP=     83
+                    |Attack= 80
+                    |Defense=75
+                    |SpAtk=  70
+                    |SpDef=  70
+                    |Speed=  101 }}
+
+                    =====Mega Pidgeot=====
+                    {{Base Stats
+                    |type=Normal
+                    |type2=Flying
+                    |HP=83
+                    |Attack=80
+                    |Defense=80
+                    |SpAtk=135
+                    |SpDef=80
+                    |Speed=121 }}
+                    '''
+
     def setUp(self):
-        with open('wikimedia/pokemon/Pidgeot.wiki') as wikifile:
-            wikicode = mw.parse(wikifile.read())
-        print(wikicode.get_sections(matches='Base stats', include_headings=False))
+        wikicode = mw.parse(textwrap.dedent(self.PIDGEOT_STATS))
         template = wikicode.get_sections(matches='Base stats', include_headings=False)[0]
         self.base_stats_section = BaseStatsSection(template)
 
