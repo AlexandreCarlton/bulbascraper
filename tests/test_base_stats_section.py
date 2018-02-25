@@ -102,10 +102,33 @@ PIDGEOT_PARSED_STATS = [
                         form='Mega Pidgeot')
 ]
 
+# Single base stat section
+BULBASAUR_WIKI_STATS = '''
+                       ===Stats===
+                       ====Base stats====
+                       {{Stats
+                       |HP=45
+                       |Attack=49
+                       |Defense=49
+                       |SpAtk=65
+                       |SpDef=65
+                       |Speed=45
+                       |Special=65
+                       |type=Grass
+                       |type2=Poison
+                       }}
+                       '''
+BULBASAUR_PARSED_STATS = [
+    BaseStatsSubsection(hit_points=45, attack=49, defence=49,
+                        special_attack=65, special_defence=65, speed=45,
+                        special=65)
+]
+
 @pytest.mark.parametrize("raw_stats,expected_subsections", [
     (VOLBEAT_WIKI_STATS, VOLBEAT_PARSED_STATS),
     (PIDGEOT_WIKI_STATS, PIDGEOT_PARSED_STATS),
-], ids=["Volbeat", "Pidgeot"])
+    (BULBASAUR_WIKI_STATS, BULBASAUR_PARSED_STATS),
+], ids=["Volbeat", "Pidgeot", "Bulbasaur"])
 def test_base_stats_section(raw_stats, expected_subsections):
     wikicode = mw.parse(textwrap.dedent(raw_stats))
     template = wikicode.get_sections(matches='Base stats', include_headings=False)[0]

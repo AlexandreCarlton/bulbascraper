@@ -51,7 +51,7 @@ class BaseStatsSection(object):
             # We have only one set of base stats; just grab the first template.
             template = next(self._section.ifilter_templates(
                 lambda node: node.name.startswith('Base stats')))
-            yield BaseStatsSubsection(self._get_base_stats_subsection(template))
+            yield self._get_base_stats_subsection(template)
         else:
             for section in subsections:
                 # We may have sections for forms and generations.
