@@ -48,14 +48,23 @@ class PokemonWikiPage(object):
         return self._info_box.generation
 
     @property
-    def pokedex_entries(self) -> Dict[str, str]:
-        return {entry.version: entry.entry
-                for entry in self._pokedex_entries}
+    def pokedex_entries(self) -> Dict[str, Dict[str, str]]:
+        entries = {form: {} for form in self.forms}
+        for entry in self._pokedex_entries:
+            if not entry.form:
+                # Applies to all forms.
+                for form in self.forms:
+                    entries[form][entry.version] = entry.entry
+            else:
+                entries[entry.form][entry.version] = entry.entry
+        return entries
 
     @property
     def base_stats(self) -> Dict[Tuple[str, int], Union[BaseStats, BaseStatsRBY]]:
         """
-        Note that Mega forms, so far, have only been introduced in Gen VI.
+        Note that so far:
+         - Mega forms have only been introduced in Gen VI.
+         - Alolan forms have only been introduced in Gen VII.
         """
 
         base_stats = {}
@@ -69,6 +78,8 @@ class PokemonWikiPage(object):
             # With the exception of Mega forms, which were all introduced in generation 6.
             if form.startswith('Mega '):
                 generations = range(6, CURRENT_GENERATION + 1)
+            elif form.startswith('Alolan '):
+                generations = range(7, CURRENT_GENERATION + 1)
             elif subsection.generations is None:
                 generations = range(self.generation, CURRENT_GENERATION + 1)
             else:

@@ -1,0 +1,68 @@
+# Has an Alolan form.
+
+name: Raticate
+
+pokedex_number:
+  national: 20
+
+generation: 1
+
+forms:
+  - Raticate
+  - Alolan Raticate
+
+images:
+  - { form: Raticate,        filename: 020Raticate.png }
+  - { form: Alolan Raticate, filename: 020Raticate-Alola.png }
+
+types:
+  - { form: Raticate,        primary: Normal }
+  - { form: Alolan Raticate, primary: Dark, secondary: Normal }
+
+pokedex_entries:
+  - forms:
+      - Raticate
+    entries:
+      - { version: Red,            entry: "It uses its whiskers to maintain its balance. It apparently slows down if they are cut off." }
+      - { version: Blue,           entry: "It uses its whiskers to maintain its balance. It apparently slows down if they are cut off." }
+      - { version: Yellow,         entry: "Its hind feet are webbed. They act as flippers, so it can swim in rivers and hunt for prey." }
+      - { version: Stadium,        entry: "If attacked, it stands up on its hind legs, bares its fangs and shrieks in an intimidating manner at its enemy." }
+      - { version: Gold,           entry: "Gnaws on anything with its tough fangs. It can even topple concrete buildings by gnawing on them." }
+      - { version: Silver,         entry: "Its whiskers help it to maintain balance. Its fangs never stop growing, so it gnaws to pare them down." }
+      - { version: Crystal,        entry: "The webs on its hind legs enable it to cross rivers. It searches wide areas for food." }
+      - { version: Stadium 2,      entry: "Gnaws on anything with its tough fangs. It can even topple concrete buildings by gnawing on them." }
+      - { version: Ruby,           entry: "Raticate's sturdy fangs grow steadily. To keep them ground down, it gnaws on rocks and logs. It may even chew on the walls of houses." }
+      - { version: Sapphire,       entry: "Raticate's sturdy fangs grow steadily. To keep them ground down, it gnaws on rocks and logs. It may even chew on the walls of houses." }
+      - { version: Emerald,        entry: "A Raticate's sturdy fangs grow steadily. To keep them ground down, it gnaws on rocks and logs. It may even chew on the walls of houses." }
+      - { version: FireRed,        entry: "Its rear feet have three toes each. They are webbed, enabling it to swim across rivers." }
+      - { version: LeafGreen,      entry: "It uses its whiskers to maintain its balance. It apparently slows down if they are cut off." }
+      - { version: Diamond,        entry: "It whittles its constantly growing fangs by gnawing on hard things. It can chew apart cinder walls." }
+      - { version: Pearl,          entry: "It whittles its constantly growing fangs by gnawing on hard things. It can chew apart cinder walls." }
+      - { version: Platinum,       entry: "It whittles its constantly growing fangs by gnawing on hard things. It can chew apart cinder walls." }
+      - { version: HeartGold,      entry: "Gnaws on anything with its tough fangs. It can even topple concrete buildings by gnawing on them." }
+      - { version: SoulSilver,     entry: "Its whiskers help it to maintain balance. Its fangs never stop growing, so it gnaws to pare them down." }
+      - { version: Black,          entry: "It whittles its constantly growing fangs by gnawing on hard things. It can chew apart cinder walls." }
+      - { version: White,          entry: "It whittles its constantly growing fangs by gnawing on hard things. It can chew apart cinder walls." }
+      - { version: Black 2,        entry: "With its long fangs, this surprisingly violent Pokémon can gnaw away even thick concrete with ease." }
+      - { version: White 2,        entry: "With its long fangs, this surprisingly violent Pokémon can gnaw away even thick concrete with ease." }
+      - { version: X,              entry: "It whittles its constantly growing fangs by gnawing on hard things. It can chew apart cinder walls." }
+      - { version: Y,              entry: "The webs on its hind legs enable it to cross rivers. It searches wide areas for food." }
+      - { version: Omega Ruby,     entry: "Raticate’s sturdy fangs grow steadily. To keep them ground down, it gnaws on rocks and logs. It may even chew on the walls of houses." }
+      - { version: Alpha Sapphire, entry: "Raticate’s sturdy fangs grow steadily. To keep them ground down, it gnaws on rocks and logs. It may even chew on the walls of houses." }
+      - { version: Sun,            entry: "Its hind feet are webbed, so it's a strong swimmer. It can cross rivers and sometimes even oceans." }
+      - { version: Moon,           entry: "Its disposition is far more violent than its looks would suggest. Don't let your hand get too close to its face, as it could bite your hand clean off." }
+      - { version: Ultra Sun,      entry: "People say that it fled from its enemies by using its small webbed hind feet to swim from island to island in Alola." }
+      - { version: Ultra Moon,     entry: "Its whiskers are essential for maintaining its balance. No matter how friendly you are, it will get angry and bite you if you touch its whiskers." }
+  - forms:
+      - Alolan Raticate
+    entries:
+      - { version: Sun,        entry: "It forms a group of Rattata, which it assumes command of. Each group has its own territory, and disputes over food happen often." }
+      - { version: Moon,       entry: "This gourmet Pokémon is particular about the taste and freshness of its food. Restaurants where Raticate live have a good reputation." }
+      - { version: Ultra Sun,  entry: "It has an incredibly greedy personality. Its nest is filled with so much food gathered by Rattata at its direction, it can't possibly eat it all." }
+      - { version: Ultra Moon, entry: "It commands a nest of Rattata. Different nests don't get along, whipping up severe fights over feeding grounds." }
+
+base_stats:
+  - { generations: [ 1 ],                form: Raticate,        hit_points: 55, attack: 81, defence: 60, special: 50, speed: 97 }
+  - { generations: [ 2, 3, 4, 5, 6, 7 ], form: Raticate,        hit_points: 55, attack: 81, defence: 60, special_attack: 50, special_defence: 70, speed: 97 }
+  - { generations: [ 7 ],                form: Alolan Raticate, hit_points: 75, attack: 71, defence: 70, special_attack: 40, special_defence: 80, speed: 77 }
+

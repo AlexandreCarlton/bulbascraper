@@ -1,5 +1,5 @@
 
-from typing import Iterator
+from typing import Optional, Iterator
 
 from dataclasses import dataclass
 import mwparserfromhell as mw
@@ -15,6 +15,7 @@ import mwparserfromhell as mw
 class PokedexEntry(object):
     version: str
     entry: str
+    form: Optional[str] = None
 
 class PokedexEntries(object):
 
@@ -22,7 +23,21 @@ class PokedexEntries(object):
         self._section = section
 
     def __iter__(self) -> Iterator[PokedexEntry]:
-        for template in self._section.filter_templates():
+        subsections = self._section.get_sections(include_lead=False)
+        if not subsections:
+            yield from self._get_entries(self._section.filter_templates())
+        else:
+            for section in subsections:
+                # We may have sections for forms and generations.
+                heading = next(section.ifilter_headings())
+                templates = section.ifilter_templates()
+                entries = self._get_entries(templates)
+                for entry in entries:
+                    entry.form = str(heading.title)
+                    yield entry
+
+    def _get_entries(self, templates: Iterator[mw.nodes.Template]) -> Iterator[PokedexEntry]:
+        for template in templates:
             if template.name.startswith('Dex/Entry'):
                 wikicode_entry = template.get('entry').value
                 entry = self._flatten_templates(wikicode_entry)

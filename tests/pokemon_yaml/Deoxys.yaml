@@ -26,24 +26,30 @@ types:
   - { form: Speed Forme,   primary: Psychic }
 
 pokedex_entries:
-  - { version: Ruby,           entry: "The DNA of a space virus underwent a sudden mutation upon exposure to a laser beam and resulted in Deoxys. The crystalline organ on this Pokémon's chest appears to be its brain." }
-  - { version: Sapphire,       entry: "Deoxys emerged from a virus that came from space. It is highly intelligent and wields psychokinetic powers. This Pokémon shoots lasers from the crystalline organ on its chest." }
-  - { version: Emerald,        entry: "A Pokémon that mutated from an extraterrestrial virus exposed to a laser beam. Its body is configured for superior agility and speed." }
-  - { version: FireRed,        entry: "This Deoxys has transformed into its aggressive guise. It can fool enemies by altering its appearance." }
-  - { version: LeafGreen,      entry: "When it changes form, an aurora appears. It absorbs attacks by altering its cellular structure." }
-  - { version: Diamond,        entry: "An alien virus that fell to earth on a meteor underwent a DNA mutation to become this Pokémon." }
-  - { version: Pearl,          entry: "An alien virus that fell to earth on a meteor underwent a DNA mutation to become this Pokémon." }
-  - { version: Platinum,       entry: "An alien virus that fell to earth on a meteor underwent a DNA mutation to become this Pokémon." }
-  - { version: HeartGold,      entry: "DNA from a space virus mutated and became a Pokémon. It appears where auroras are seen." }
-  - { version: SoulSilver,     entry: "DNA from a space virus mutated and became a Pokémon. It appears where auroras are seen." }
-  - { version: Black,          entry: "An alien virus that fell to earth on a meteor underwent a DNA mutation to become this Pokémon." }
-  - { version: White,          entry: "An alien virus that fell to earth on a meteor underwent a DNA mutation to become this Pokémon." }
-  - { version: Black 2,        entry: "An alien virus that fell to earth on a meteor underwent a DNA mutation to become this Pokémon." }
-  - { version: White 2,        entry: "An alien virus that fell to earth on a meteor underwent a DNA mutation to become this Pokémon." }
-  - { version: X,              entry: "An alien virus that fell to earth on a meteor underwent a DNA mutation to become this Pokémon." }
-  - { version: Y,              entry: "DNA from a space virus mutated and became a Pokémon. It appears where auroras are seen." }
-  - { version: Omega Ruby,     entry: "The DNA of a space virus underwent a sudden mutation upon exposure to a laser beam and resulted in Deoxys. The crystalline organ on this Pokémon's chest appears to be its brain." }
-  - { version: Alpha Sapphire, entry: "Deoxys emerged from a virus that came from space. It is highly intelligent and wields psychokinetic powers. This Pokémon shoots lasers from the crystalline organ on its chest." }
+  - forms:
+      - Normal Forme
+      - Attack Forme
+      - Defense Forme
+      - Speed Forme
+    entries:
+      - { version: Ruby,           entry: "The DNA of a space virus underwent a sudden mutation upon exposure to a laser beam and resulted in Deoxys. The crystalline organ on this Pokémon's chest appears to be its brain." }
+      - { version: Sapphire,       entry: "Deoxys emerged from a virus that came from space. It is highly intelligent and wields psychokinetic powers. This Pokémon shoots lasers from the crystalline organ on its chest." }
+      - { version: Emerald,        entry: "A Pokémon that mutated from an extraterrestrial virus exposed to a laser beam. Its body is configured for superior agility and speed." }
+      - { version: FireRed,        entry: "This Deoxys has transformed into its aggressive guise. It can fool enemies by altering its appearance." }
+      - { version: LeafGreen,      entry: "When it changes form, an aurora appears. It absorbs attacks by altering its cellular structure." }
+      - { version: Diamond,        entry: "An alien virus that fell to earth on a meteor underwent a DNA mutation to become this Pokémon." }
+      - { version: Pearl,          entry: "An alien virus that fell to earth on a meteor underwent a DNA mutation to become this Pokémon." }
+      - { version: Platinum,       entry: "An alien virus that fell to earth on a meteor underwent a DNA mutation to become this Pokémon." }
+      - { version: HeartGold,      entry: "DNA from a space virus mutated and became a Pokémon. It appears where auroras are seen." }
+      - { version: SoulSilver,     entry: "DNA from a space virus mutated and became a Pokémon. It appears where auroras are seen." }
+      - { version: Black,          entry: "An alien virus that fell to earth on a meteor underwent a DNA mutation to become this Pokémon." }
+      - { version: White,          entry: "An alien virus that fell to earth on a meteor underwent a DNA mutation to become this Pokémon." }
+      - { version: Black 2,        entry: "An alien virus that fell to earth on a meteor underwent a DNA mutation to become this Pokémon." }
+      - { version: White 2,        entry: "An alien virus that fell to earth on a meteor underwent a DNA mutation to become this Pokémon." }
+      - { version: X,              entry: "An alien virus that fell to earth on a meteor underwent a DNA mutation to become this Pokémon." }
+      - { version: Y,              entry: "DNA from a space virus mutated and became a Pokémon. It appears where auroras are seen." }
+      - { version: Omega Ruby,     entry: "The DNA of a space virus underwent a sudden mutation upon exposure to a laser beam and resulted in Deoxys. The crystalline organ on this Pokémon's chest appears to be its brain." }
+      - { version: Alpha Sapphire, entry: "Deoxys emerged from a virus that came from space. It is highly intelligent and wields psychokinetic powers. This Pokémon shoots lasers from the crystalline organ on its chest." }
 
 base_stats:
   - { generations: [ 3, 4, 5, 6, 7 ], form: Normal Forme,  hit_points: 50, attack: 150, defence: 50,  special_attack: 150, special_defence: 50,  speed: 150 }

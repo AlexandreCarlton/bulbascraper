@@ -19,32 +19,37 @@ types:
   - { form: Mega Charizard Y, primary: Fire, secondary: Flying }
 
 pokedex_entries:
-  - { version: Red,            entry: "Spits fire that is hot enough to melt boulders. Known to cause forest fires unintentionally." }
-  - { version: Blue,           entry: "Spits fire that is hot enough to melt boulders. Known to cause forest fires unintentionally." }
-  - { version: Yellow,         entry: "When expelling a blast of super hot fire, the red flame at the tip of its tail burns more intensely." }
-  - { version: Stadium,        entry: "Its fiery breath reaches incredible temperatures. It can quickly melt glaciers weighing 10,000 tons." }
-  - { version: Gold,           entry: "If Charizard becomes furious, the flame at the tip of its tail flares up in a whitish-blue color." }
-  - { version: Silver,         entry: "Breathing intense, hot flames, it can melt almost anything. Its breath inflicts terrible pain on enemies." }
-  - { version: Crystal,        entry: "It uses its wings to fly high. The temperature of its fire increases as it gains experience in battle." }
-  - { version: Stadium 2,      entry: "If Charizard becomes furious, the flame at the tip of its tail flares up in a whitish-blue color." }
-  - { version: Ruby,           entry: "Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself." }
-  - { version: Sapphire,       entry: "Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself." }
-  - { version: Emerald,        entry: "A Charizard flies about in search of strong opponents. It breathes intense flames that can melt any material. However, it will never torch a weaker foe." }
-  - { version: FireRed,        entry: "Its wings can carry this Pokémon close to an altitude of 4,600 feet. It blows out fire at very high temperatures." }
-  - { version: LeafGreen,      entry: "It spits fire that is hot enough to melt boulders. It may cause forest fires by blowing flames." }
-  - { version: Diamond,        entry: "It is said that Charizard's fire burns hotter if it has experienced harsh battles." }
-  - { version: Pearl,          entry: "It is said that Charizard's fire burns hotter if it has experienced harsh battles." }
-  - { version: Platinum,       entry: "It is said that Charizard's fire burns hotter if it has experienced harsh battles." }
-  - { version: HeartGold,      entry: "If Charizard becomes furious, the flame at the tip of its tail flares up in a whitish-blue color." }
-  - { version: SoulSilver,     entry: "Breathing intense, hot flames, it can melt almost anything. Its breath inflicts terrible pain on enemies." }
-  - { version: Black,          entry: "It is said that Charizard's fire burns hotter if it has experienced harsh battles." }
-  - { version: White,          entry: "It is said that Charizard's fire burns hotter if it has experienced harsh battles." }
-  - { version: Black 2,        entry: "It is said that Charizard's fire burns hotter if it has experienced harsh battles." }
-  - { version: White 2,        entry: "It is said that Charizard's fire burns hotter if it has experienced harsh battles." }
-  - { version: X,              entry: "When expelling a blast of superhot fire, the red flame at the tip of its tail burns more intensely." }
-  - { version: Y,              entry: "Its wings can carry this Pokémon close to an altitude of 4,600 feet. It blows out fire at very high temperatures." }
-  - { version: Omega Ruby,     entry: "Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself." }
-  - { version: Alpha Sapphire, entry: "Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself." }
+  - forms:
+      - Charizard
+      - Mega Charizard X
+      - Mega Charizard Y
+    entries:
+      - { version: Red,            entry: "Spits fire that is hot enough to melt boulders. Known to cause forest fires unintentionally." }
+      - { version: Blue,           entry: "Spits fire that is hot enough to melt boulders. Known to cause forest fires unintentionally." }
+      - { version: Yellow,         entry: "When expelling a blast of super hot fire, the red flame at the tip of its tail burns more intensely." }
+      - { version: Stadium,        entry: "Its fiery breath reaches incredible temperatures. It can quickly melt glaciers weighing 10,000 tons." }
+      - { version: Gold,           entry: "If Charizard becomes furious, the flame at the tip of its tail flares up in a whitish-blue color." }
+      - { version: Silver,         entry: "Breathing intense, hot flames, it can melt almost anything. Its breath inflicts terrible pain on enemies." }
+      - { version: Crystal,        entry: "It uses its wings to fly high. The temperature of its fire increases as it gains experience in battle." }
+      - { version: Stadium 2,      entry: "If Charizard becomes furious, the flame at the tip of its tail flares up in a whitish-blue color." }
+      - { version: Ruby,           entry: "Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself." }
+      - { version: Sapphire,       entry: "Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself." }
+      - { version: Emerald,        entry: "A Charizard flies about in search of strong opponents. It breathes intense flames that can melt any material. However, it will never torch a weaker foe." }
+      - { version: FireRed,        entry: "Its wings can carry this Pokémon close to an altitude of 4,600 feet. It blows out fire at very high temperatures." }
+      - { version: LeafGreen,      entry: "It spits fire that is hot enough to melt boulders. It may cause forest fires by blowing flames." }
+      - { version: Diamond,        entry: "It is said that Charizard's fire burns hotter if it has experienced harsh battles." }
+      - { version: Pearl,          entry: "It is said that Charizard's fire burns hotter if it has experienced harsh battles." }
+      - { version: Platinum,       entry: "It is said that Charizard's fire burns hotter if it has experienced harsh battles." }
+      - { version: HeartGold,      entry: "If Charizard becomes furious, the flame at the tip of its tail flares up in a whitish-blue color." }
+      - { version: SoulSilver,     entry: "Breathing intense, hot flames, it can melt almost anything. Its breath inflicts terrible pain on enemies." }
+      - { version: Black,          entry: "It is said that Charizard's fire burns hotter if it has experienced harsh battles." }
+      - { version: White,          entry: "It is said that Charizard's fire burns hotter if it has experienced harsh battles." }
+      - { version: Black 2,        entry: "It is said that Charizard's fire burns hotter if it has experienced harsh battles." }
+      - { version: White 2,        entry: "It is said that Charizard's fire burns hotter if it has experienced harsh battles." }
+      - { version: X,              entry: "When expelling a blast of superhot fire, the red flame at the tip of its tail burns more intensely." }
+      - { version: Y,              entry: "Its wings can carry this Pokémon close to an altitude of 4,600 feet. It blows out fire at very high temperatures." }
+      - { version: Omega Ruby,     entry: "Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself." }
+      - { version: Alpha Sapphire, entry: "Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself." }
 
 base_stats:
   - { generations: [ 1 ],                form: Charizard,        hit_points: 78, attack: 84,  defence: 78,  special: 85, speed: 100 }

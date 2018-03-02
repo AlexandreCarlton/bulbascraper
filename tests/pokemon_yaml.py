@@ -36,9 +36,14 @@ class PokemonYaml(object):
                 for type_ in self._yaml.get('types', [])}
 
     @property
-    def pokedex_entries(self) -> Dict[str, str]:
-        entries = self._yaml.get('pokedex_entries', [])
-        return {entry['version']: entry['entry'] for entry in entries}
+    def pokedex_entries(self) -> Dict[str, Dict[str, str]]:
+        pokedex_entries = {}
+        for pokedex_yaml_entry in self._yaml.get('pokedex_entries', []):
+            for form in pokedex_yaml_entry['forms']:
+                pokedex_entries[form] = {}
+                for entry in pokedex_yaml_entry['entries']:
+                    pokedex_entries[form][entry['version']] = entry['entry']
+        return pokedex_entries
 
     @property
     def base_stats(self) -> Dict[Tuple[str, int], Union[BaseStats, BaseStatsRBY]]:

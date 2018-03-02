@@ -11,7 +11,8 @@ from pokemon_yaml import PokemonYaml
 
 POKEMON = [
     'Charizard',
-    'Deoxys'
+    'Deoxys',
+    'Raticate'
 ]
 
 @pytest.fixture(scope='module', params=POKEMON)
