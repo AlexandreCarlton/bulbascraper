@@ -34,8 +34,7 @@ class PokemonFactory(object):
         pokedex_entries = PokedexEntries(
             game_data.get_sections(matches='Pokédex entries',
                                    include_headings=False)[0])
-        base_stats = wikicode.get_sections(matches='Base stats',
-                                           include_headings=False)[0]
+        base_stats = wikicode.get_sections(matches='Base stats')[0]
 
         return PokemonWikiPage(info_box=info_box,
                                pokedex_entries=pokedex_entries,

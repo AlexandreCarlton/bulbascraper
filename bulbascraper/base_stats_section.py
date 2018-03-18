@@ -45,7 +45,10 @@ class BaseStatsSection(object):
         - Bulbasaur (no changes)
         '''
 
-        subsections = self._section.get_sections(include_lead=False)
+
+        section_without_heading = self._section.get_sections(
+            include_headings=False, include_lead=False)[0]
+        subsections = section_without_heading.get_sections(include_lead=False)
 
         if not subsections:
             # We have only one set of base stats; just grab the first template.

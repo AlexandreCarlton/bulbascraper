@@ -131,7 +131,7 @@ BULBASAUR_PARSED_STATS = [
 ], ids=["Volbeat", "Pidgeot", "Bulbasaur"])
 def test_base_stats_section(raw_stats, expected_subsections):
     wikicode = mw.parse(textwrap.dedent(raw_stats))
-    template = wikicode.get_sections(matches='Base stats', include_headings=False)[0]
+    template = wikicode.get_sections(matches='Base stats')[0]
     base_stats_section = BaseStatsSection(template)
     subsections = list(base_stats_section.subsections)
     assert subsections == expected_subsections
