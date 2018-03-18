@@ -7,6 +7,7 @@ from bulbascraper.info_box import InfoBox
 from bulbascraper.pokedex_entries import PokedexEntries
 from bulbascraper.pokemon_wiki_page import PokemonWikiPage
 from bulbascraper.wiki_downloader import WikiDownloader
+from bulbascraper.wiki_page import WikiPage
 
 class PokemonFactory(object):
 
@@ -24,19 +25,5 @@ class PokemonFactory(object):
         with filename.open('r') as wikifile:
             wikicode = self._parser.parse(wikifile.read())
 
-        templates = wikicode.filter_templates()
-        game_data = wikicode.get_sections(matches='Game data',
-                                          include_headings=False)[0]
-
-        info_box = InfoBox(next(template
-                                for template in templates
-                                if template.name.strip() == 'Pokémon Infobox'))
-        pokedex_entries = PokedexEntries(
-            game_data.get_sections(matches='Pokédex entries')[0])
-        base_stats = wikicode.get_sections(matches='Base stats')[0]
-
-        return PokemonWikiPage(info_box=info_box,
-                               pokedex_entries=pokedex_entries,
-                               base_stats=BaseStatsSection(base_stats))
-
-
+        wiki_page = WikiPage(wikicode)
+        return PokemonWikiPage(wiki_page)

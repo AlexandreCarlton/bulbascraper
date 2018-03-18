@@ -8,6 +8,7 @@ from bulbascraper.pokedex_entries import PokedexEntries, PokedexEntry
 from bulbascraper.pokemon_type import PokemonType
 from bulbascraper.base_stats import BaseStats, BaseStatsRBY
 from bulbascraper.base_stats_section import BaseStatsSection
+from bulbascraper.wiki_page import WikiPage
 
 CURRENT_GENERATION = 7
 
@@ -16,14 +17,10 @@ class PokemonWikiPage(object):
     A Pokemon Wikipedia page.
     """
 
-    def __init__(self,
-                 info_box: InfoBox,
-                 pokedex_entries: PokedexEntries,
-                 base_stats: BaseStatsSection,
-                 ) -> None:
-        self._info_box = info_box
-        self._pokedex_entries = pokedex_entries
-        self._base_stats = base_stats
+    def __init__(self, wiki_page: WikiPage):
+        self._info_box = InfoBox(wiki_page.info_box)
+        self._pokedex_entries = PokedexEntries(wiki_page.pokedex_entries)
+        self._base_stats = BaseStatsSection(wiki_page.base_stats)
 
     @property
     def name(self) -> str:
