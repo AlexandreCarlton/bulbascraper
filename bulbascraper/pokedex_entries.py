@@ -23,7 +23,9 @@ class PokedexEntries(object):
         self._section = section
 
     def __iter__(self) -> Iterator[PokedexEntry]:
-        subsections = self._section.get_sections(include_lead=False)
+        section_without_heading = self._section.get_sections(
+            include_headings=False, include_lead=False)[0]
+        subsections = section_without_heading.get_sections(include_lead=False)
         if not subsections:
             yield from self._get_entries(self._section.filter_templates())
         else:

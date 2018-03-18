@@ -197,7 +197,7 @@ CATERPIE_PARSED_ENTRIES = [
 ], ids=['Raticate', 'Caterpie'])
 def test_base_stats_section(raw_entries, expected_entries):
     wikicode = mw.parse(textwrap.dedent(raw_entries))
-    section = wikicode.get_sections(matches='Pokédex entries', include_headings=False)[0]
+    section = wikicode.get_sections(matches='Pokédex entries')[0]
     pokedex_entries = PokedexEntries(section)
     entries = list(pokedex_entries)
     assert entries == expected_entries

@@ -32,8 +32,7 @@ class PokemonFactory(object):
                                 for template in templates
                                 if template.name.strip() == 'Pokémon Infobox'))
         pokedex_entries = PokedexEntries(
-            game_data.get_sections(matches='Pokédex entries',
-                                   include_headings=False)[0])
+            game_data.get_sections(matches='Pokédex entries')[0])
         base_stats = wikicode.get_sections(matches='Base stats')[0]
 
         return PokemonWikiPage(info_box=info_box,
