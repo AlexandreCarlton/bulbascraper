@@ -10,7 +10,7 @@ from bulbascraper.pokemon_list_by_ability import (PokemonListByAbility,
 def pokemon_menu_sprites():
     abilities = PokemonListByAbility(Path('wikimedia'))
     grouped = itertools.groupby(abilities, key=lambda ability: ability.pokemon_name)
-    return {str(pokemon_name): [ability.menu_sprite
+    return {pokemon_name: [ability.menu_sprite
                            for ability in grouped_abilities]
             for pokemon_name, grouped_abilities in grouped}
 

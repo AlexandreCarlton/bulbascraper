@@ -43,5 +43,5 @@ class PokemonListByAbility(object):
 
 def get(template, key, default=None):
     if template.has(key):
-        return template.get(key)
+        return str(template.get(key))
     return default
