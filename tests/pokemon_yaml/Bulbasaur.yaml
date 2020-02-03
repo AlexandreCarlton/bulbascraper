@@ -1,0 +1,70 @@
+# A Generation 1 Pokemon; has RBY base stats (with a Special stat).
+
+name: Bulbasaur
+# TODO: Make this nested?
+pokedex_number:
+  national: 1
+
+generation: 1
+
+types:
+  - { form: Bulbasaur, primary: Grass, secondary: Poison }
+
+category: Seed
+height: 2'04"
+weight: 15.2
+
+abilities:
+  - Overgrow
+dream_ability: Chlorophyll
+
+egg_groups:
+  - Monster
+  - Grass
+egg_cycles: 20
+
+effort_values:
+  special_attack: 1
+
+stats:
+  - { generation: 1, form: Bulbasaur, hit_points: 45, attack: 49, defence: 49, special: 65,                             speed: 45 }
+  - { generation: 2, form: Bulbasaur, hit_points: 45, attack: 49, defence: 49, special_attack: 49, special_defence: 65, speed: 45 }
+  - { generation: 3, form: Bulbasaur, hit_points: 45, attack: 49, defence: 49, special_attack: 49, special_defence: 65, speed: 45 }
+  - { generation: 4, form: Bulbasaur, hit_points: 45, attack: 49, defence: 49, special_attack: 49, special_defence: 65, speed: 45 }
+  - { generation: 5, form: Bulbasaur, hit_points: 45, attack: 49, defence: 49, special_attack: 49, special_defence: 65, speed: 45 }
+  - { generation: 6, form: Bulbasaur, hit_points: 45, attack: 49, defence: 49, special_attack: 49, special_defence: 65, speed: 45 }
+  - { generation: 7, form: Bulbasaur, hit_points: 45, attack: 49, defence: 49, special_attack: 49, special_defence: 65, speed: 45 }
+
+# Wait - learnset isn't via generation - it's game-pair!
+learnset:
+  - generation: 1
+    level_up:
+      - { level: 1,  move: Tackle }
+      - { level: 1,  move: Growl }
+      - { level: 7,  move: Leech Seed }
+      - { level: 13, move: Vine Whip }
+      - { level: 20, move: PoisonPowder }
+      - { level: 27, move: Razor Leaf }
+      - { level: 34, move: Growth }
+      - { level: 41, move: Sleep Powder }
+      - { level: 48, move: SolarBeam }
+    technical_machine: [3, 6, 8, 9, 10, 20, 21, 22, 31, 32, 33, 34, 44, 50]
+    hidden_machine: [1]
+
+  - generation: 2
+    breed:
+      - move: Light Screen
+        fathers: [Chikorita, Bayleef, Meganium, Mareep, Flaaffy, Ampharos]
+      # ...
+    level_up:
+      - { level: 1,  move: Tackle }
+      - { level: 4,  move: Growl }
+      - { level: 7,  move: Leech Seed }
+      - { level: 10, move: Vine Whip }
+      - { level: 15, move: PoisonPowder }
+      - { level: 15, move: Sleep Powder }
+      - { level: 20, move: Razor Leaf }
+      - { level: 25, move: Sweet Scent }
+      - { level: 32, move: Growth }
+      - { level: 39, move: Synthesis }
+      - { level: 46, move: SolarBeam }

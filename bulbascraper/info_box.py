@@ -12,6 +12,7 @@ class ImageFilename(object):
     filename: str
 
 # Contains info for all forms
+# Spec: https://bulbapedia.bulbagarden.net/wiki/Template_talk:Pok%C3%A9mon_Infobox
 class InfoBox(object):
 
     '''Provides a way to extract information from a box.

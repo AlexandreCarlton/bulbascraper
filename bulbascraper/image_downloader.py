@@ -1,5 +1,6 @@
 
 from io import StringIO
+import logging
 from pathlib import Path
 
 from lxml import etree
@@ -20,8 +21,9 @@ class ImageDownloader(object):
     def __init__(self, directory: Path):
         self.directory = directory
         self.html_parser = etree.HTMLParser()
+        self.logger = logging.getLogger(self.__class__.__name__)
 
-    def download_image(self, image_filename: str):
+    def download_image(self, image_filename: str, overwrite: bool=True):
         """
         Locates the filename on Bulbapedia, and downloads it to the
         directory.
@@ -39,6 +41,7 @@ class ImageDownloader(object):
         image filename.
         """
         url = 'https://bulbapedia.bulbagarden.net/wiki/File:{}'.format(image_filename)
+        self.logger.debug("Downloading url %s", url)
         site_response = requests.get(url)
         tree = etree.parse(StringIO(site_response.text), self.html_parser) # type: etree.ElementTree
         try:
@@ -46,4 +49,6 @@ class ImageDownloader(object):
         except IndexError:
             raise NoImageException("No image filename found for '{}'.".format(image_filename))
         href = hyperlink_element.attrib['href']
+        self.logger.debug("href attribute found with value %s", href)
+
         return 'https:' + href

@@ -27,6 +27,10 @@ class PokemonWikiPage(object):
         return self._info_box.name
 
     @property
+    def national_pokedex_number(self) -> int:
+        return self._info_box.number
+
+    @property
     def forms(self) -> List[str]:
         return list(self._info_box.forms)
 
@@ -39,6 +43,19 @@ class PokemonWikiPage(object):
     def images(self) -> Dict[str, str]:
         return {image.form: image.filename
                 for image in self._info_box.images}
+
+    @property
+    def menu_sprites(self) -> Dict[str, str]:
+        sprites = {}
+        for form, image_filename in self.images.items():
+            if '-' in image_filename:
+                 form_variation = image_filename.rstrip('.png').split('-', 1)[1]
+                 initials = ''.join(f[0] for f in form_variation.split())
+                 sprites[form] = str(self.national_pokedex_number) + initials + '.png'
+            else:
+                sprites[form] = str(self.national_pokedex_number) + '.png'
+        return sprites
+
 
     @property
     def generation(self) -> int:
